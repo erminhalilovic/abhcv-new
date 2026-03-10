@@ -148,7 +148,6 @@ export function CVEditor({ employee, onUpdate }: CVEditorProps) {
       id: `resp-${Date.now()}`,
       title: "",
       description: "",
-      technologies: [],
     };
     onUpdate({
       responsibilities: [newItem, ...employee.responsibilities],
