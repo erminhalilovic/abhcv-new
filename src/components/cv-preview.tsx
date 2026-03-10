@@ -275,7 +275,7 @@ function PageShell({
 
         {/* Right column sections */}
         {hasRightContent && (
-          <div className="absolute left-7 top-[130px] w-36 flex flex-col gap-10">
+          <div className="absolute left-7 top-[105px] w-36 flex flex-col gap-10">
             {rightColumnSections.education &&
               employee.education.length > 0 && (
                 <div className="flex flex-col gap-2.5">
@@ -367,7 +367,7 @@ function MeasuringContainer({
         exact space the header consumes so it can derive page1Available dynamically.
       */}
       <div data-measure-id="page1-header" style={{ overflow: "hidden" }}>
-        <div className="flex flex-col gap-2 mb-[48px]">
+        <div className="flex flex-col gap-2 mb-[28px]">
           <h1 className="text-[24px] font-bold text-[#222831] leading-6">A</h1>
           <p className="text-[12px] text-[#222831] leading-[1.1]">A</p>
         </div>
@@ -483,7 +483,7 @@ export function CVPreview({
         >
           {/* Header — only on page 1 */}
           {page.showHeader && (
-            <div className="flex flex-col gap-2 mb-[48px]">
+            <div className="flex flex-col gap-2 mb-[28px]">
               <h1 className="text-[24px] font-bold text-[#222831] leading-6">
                 {employee.name}
               </h1>
