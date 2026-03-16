@@ -1,4 +1,5 @@
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
+import chromium from "@sparticuz/chromium";
 import jsPDF from "jspdf";
 
 // A4 dimensions in jsPDF points
@@ -16,8 +17,11 @@ export async function POST(req: Request) {
   const baseUrl = `${protocol}://${host}`;
 
   const browser = await puppeteer.launch({
+    args: isLocal ? [] : chromium.args,
+    executablePath: isLocal
+      ? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+      : await chromium.executablePath(),
     headless: true,
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
 
   try {
