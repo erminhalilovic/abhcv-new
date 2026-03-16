@@ -126,7 +126,7 @@ function CVSectionHeader({
   dark?: boolean;
 }) {
   return (
-    <div className="pb-1.5 mb-1.5">
+    <div>
       <p
         className="text-[16px] leading-[1.1] font-medium uppercase bg-clip-text text-transparent mb-1.5"
         style={{

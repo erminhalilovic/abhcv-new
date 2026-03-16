@@ -23,8 +23,8 @@ export async function POST(req: Request) {
   try {
     const page = await browser.newPage();
 
-    // 2× DPR for retina-quality screenshots
-    await page.setViewport({ width: 1400, height: 842, deviceScaleFactor: 2 });
+    // 4× DPR for high-quality screenshots
+    await page.setViewport({ width: 1400, height: 842, deviceScaleFactor: 4 });
 
     await page.goto(
       `${baseUrl}/cv-export?data=${encodeURIComponent(data)}`,
